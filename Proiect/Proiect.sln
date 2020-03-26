@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemaPIU", "TemaPIU.csproj", "{1B3995E0-7EE3-45B8-9AEB-360FC52699FC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proiect", "Proiect.csproj", "{F7EC80B4-D318-4ED1-9A34-71F4F3B64C9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1B3995E0-7EE3-45B8-9AEB-360FC52699FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B3995E0-7EE3-45B8-9AEB-360FC52699FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B3995E0-7EE3-45B8-9AEB-360FC52699FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B3995E0-7EE3-45B8-9AEB-360FC52699FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7EC80B4-D318-4ED1-9A34-71F4F3B64C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7EC80B4-D318-4ED1-9A34-71F4F3B64C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7EC80B4-D318-4ED1-9A34-71F4F3B64C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7EC80B4-D318-4ED1-9A34-71F4F3B64C9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {82EC524E-2FDF-48DA-8251-C9A57C008F99}
+		SolutionGuid = {1D6C775E-EF4D-463C-8E74-62035A807BE9}
 	EndGlobalSection
 EndGlobal
