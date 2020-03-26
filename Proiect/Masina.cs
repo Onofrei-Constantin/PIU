@@ -8,31 +8,25 @@ namespace Proiect
 {
     public class Masina
     {
-        string marca;
-        string model;
-        string culoare;
-        double pret;
-        int anFabricare;
+        public string marca { get; set; }
+        public string model { get; set; }
+        public string culoare { get; set; }
 
-        public Masina()
+        public string pret { get; set; }
+        public string anFabricare { get; set; }
+
+        public Masina(string masina)
         {
-            marca = string.Empty;
-            culoare = string.Empty;
-            model = string.Empty;
-            pret = 0;
-            anFabricare = 0;
+            string[] buff = masina.Split(',');
+            marca = buff[0];
+            model = buff[1];
+            culoare = buff[2];
+            pret = buff[3];
+            anFabricare = buff[4];
         }
-        public Masina(string _marca, string _model, string _culoare, double _pret, int _anFabricare)
+        public void afisare()
         {
-            marca = _marca;
-            model = _model;
-            culoare = _culoare;
-            pret = _pret;
-            anFabricare = _anFabricare;
-        }
-        public string Info()
-        {
-            return string.Format("Masina este {0}, modelul {1}, are culoarea {2}, pretul de {3} euro, din anul {4}.",marca,model,culoare,pret,anFabricare);
+            Console.WriteLine("Masina este {0}, modelul {1}, are culoarea {2}, pretul de {3} lei, din anul {4}.",marca,model,culoare,pret,anFabricare);
         }
     }
 }
