@@ -8,12 +8,11 @@ namespace Proiect
 {
     public class Masina
     {
-        public string marca { get; set; }
-        public string model { get; set; }
-        public string culoare { get; set; }
-
-        public string pret { get; set; }
-        public string anFabricare { get; set; }
+        public string marca;
+        public string model;
+        public string culoare;
+        public string pret;
+        public string anFabricare;
 
         public Masina(string masina)
         {

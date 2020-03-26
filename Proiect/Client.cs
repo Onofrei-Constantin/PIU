@@ -8,12 +8,12 @@ namespace Proiect
 {
     public class Client
     {
-        public string nume { get; set; }
-        public string prenume { get; set; }
-        public string CNP { get; set; }
-        public int perioada { get; set; }
-        public double sumaDisponibila { get; set; }
-        public static int interesat { get; set; }
+        public string nume;
+        public string prenume;
+        public string CNP;
+        public int perioada;
+        public double sumaDisponibila;
+        public static int interesat;
         public Client(string _nume, string _prenume, string _CNP, double _sumaDisponibila, int _perioada)
         {
             nume = _nume;
