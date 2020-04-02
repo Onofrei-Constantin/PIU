@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7EC80B4-D318-4ED1-9A34-71F4F3B64C9B}</ProjectGuid>
+    <ProjectGuid>{E9744117-4306-43EE-A076-CD13CE66D164}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Proiect</RootNamespace>
     <AssemblyName>Proiect</AssemblyName>
@@ -43,8 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Angajat.cs" />
-    <Compile Include="Client.cs" />
     <Compile Include="Masina.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,61 +10,75 @@ namespace Proiect
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("LOG IN: ");
-            Console.WriteLine("EMAIL/USER: ");
-            string  emailUserAngajat= Console.ReadLine();
-            Console.WriteLine("PAROLA: ");
-            string  parolaAngajat = Console.ReadLine();
-            Angajat a1 = new Angajat(emailUserAngajat, parolaAngajat);
-            Console.WriteLine("LOGARE COMPLETA!");
-            if (Angajat.PrezentAngajat == 1 && a1 != null)
-            {
-                Angajat.NumeAngajat an1 = new Angajat.NumeAngajat("Popescu", "Andrei");
-                Console.WriteLine(an1.NumeComplte);
-            }
+            //Instantierea unei Masini utilizand constructorul fara paramatrii
 
-            if (Angajat.PrezentAngajat == 2)
-            {
-                Console.WriteLine("Introduceti numele clientului:");
-                string NUME = Console.ReadLine();
-                Console.WriteLine("Introduceti prenumele clientului:");
-                string PRENUME = Console.ReadLine();
-                Console.WriteLine("Introduceti CNP-ul clientului:");
-                string CNP = Console.ReadLine();
-                Console.WriteLine("Introduceti suma de care dispune clientul:");
-                double SumaDisponibila;
-                if (!double.TryParse(Console.ReadLine(), out SumaDisponibila))
-                {
-                    Console.WriteLine("Eroare la citire");
-                }
-                Console.WriteLine("Introduceti perioada de inchirere(zile) a masinii:");
-                int Perioada;
-                if (!int.TryParse(Console.ReadLine(), out Perioada))
-                {
-                    Console.WriteLine("Eroare la citire");
-                }
-                Client c1 = new Client(NUME, PRENUME, CNP, SumaDisponibila, Perioada);
-                string s1 = c1.Info();
-                Console.WriteLine(s1);
-            }
+            Console.WriteLine("Instantierea unui Medicament utilizand constructorul fara paramatrii");
+            Masina masina = new Masina();
+            string buf = masina.Afisare();
+            Console.WriteLine(buf);
+            
 
 
+            //Instantierea unei Masini utilizand constructorul cu parametrii
 
-            if (Client.interesat == 1)
-            {
-                Masina m1 = new Masina("Audi,A4,negru,300,2007");
-                m1.afisare();
-                Masina m2 = new Masina("VW,Golf V,alb,300,2007");
-                m2.afisare();
-                Masina m3 = new Masina("VW,Golf VI,albastru,400,2009");
-                m3.afisare();
-                Masina m4 = new Masina("Audi,A5,gri,350,2009");
-                m4.afisare();
-                Masina m5 = new Masina("Dacia,Logan,alb,200,2009");
-                m5.afisare();
+            Console.WriteLine("Instantierea unui Medicament utilizand constructorul cu parametrii");
+            Masina masina1 = new Masina(2007, 4500, "Andrei Popa", "Onofrei Constantin", "AUDI A4","Negru","Aer conditionat,navigatie","02.04.2020");
+            string buf1 = masina1.Afisare();
+            Console.WriteLine(buf1);
 
-            }
+            //Instantierea unei Masini prin intermediul unui constructor care primeste ca parametru un sir
+
+            Console.WriteLine("Instantierea unui Medicament prin intermediul unui constructor care primeste ca parametru un sir");
+            Masina masina2 = new Masina("2009 5000 Vieru_Andrei Onofrei_Constantin VW_Golf_V Gri Aer_conditionat,navigatie 02.04.2020");
+            string buf2 = masina2.Afisare();
+            Console.WriteLine(buf2);
+
+            //Compara doua masini
+            if (masina1.ComparaDouaMasini(masina2))
+                Console.WriteLine("Masina {0} a vazatorului {1} si masina {2} vanzatorului {} sunt identice", masina1.Tip, masina1.NumeVanzator,masina2.Tip,masina2.NumeVanzator);
+            else
+                Console.WriteLine("Cele doua medicamente comparate nu sunt la fel");
+
+            //Citire masina de la tastatura
+
+            Console.WriteLine("Citire date despre masina de la tastatura:");
+            Masina masina3 = new Masina();
+            masina3 = CitireMasinaTastatura();
+            string buf3 = masina3.ConversieLaSir();
+            Console.WriteLine(buf3);
+
             Console.ReadKey();
         }
+        public static Masina CitireMasinaTastatura()
+        {
+            Masina masinaTastatura = new Masina();
+
+            Console.WriteLine("Numele vazatorului : ");
+            masinaTastatura.NumeVanzator = Console.ReadLine();
+
+            Console.WriteLine("Numele cumparatorului : ");
+            masinaTastatura.NumeCumparator = Console.ReadLine();
+
+            Console.WriteLine("Model si tip : ");
+            masinaTastatura.Tip = Console.ReadLine();
+
+            Console.WriteLine("Pret : ");
+            masinaTastatura.Pret = float.Parse(Console.ReadLine());
+
+            Console.WriteLine("Anul Fabricatie : ");
+            masinaTastatura.AnFabricatie = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Optiuni : ");
+            masinaTastatura.Optiuni = Console.ReadLine();
+
+            Console.WriteLine("Data tranzactiei : ");
+            masinaTastatura.DataTranzactie = Console.ReadLine();
+
+            Console.WriteLine("Culoare : ");
+            masinaTastatura.Culoare = Console.ReadLine();
+
+            return masinaTastatura;
+        }
+
     }
 }
