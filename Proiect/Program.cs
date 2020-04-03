@@ -40,7 +40,7 @@ namespace Proiect
 
             //Compara doua masini
             if (masina1.ComparaDouaMasini(masina2))
-                Console.WriteLine("Masina {0} a vazatorului {1} si masina {2} a vanzatorului {} sunt identice", masina1.Tip, masina1.NumeVanzator,masina2.Tip,masina2.NumeVanzator);
+                Console.WriteLine("Masina {0} a vazatorului {1} si masina {2} a vanzatorului {3} sunt identice", masina1.Tip, masina1.NumeVanzator,masina2.Tip,masina2.NumeVanzator);
             else
                 Console.WriteLine("Cele doua masini comparate nu sunt la fel");
 
